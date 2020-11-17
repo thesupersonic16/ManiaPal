@@ -1,0 +1,3 @@
+[submodule "ManiaPal/RSDK-Reverse"]
+	path = ManiaPal/RSDK-Reverse
+	url = https://github.com/Rubberduckycooly/RSDK-Reverse

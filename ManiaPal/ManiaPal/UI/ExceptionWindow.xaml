@@ -1,0 +1,27 @@
+﻿<Window x:Class="ManiaPal.ExceptionWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManiaPal"
+             mc:Ignorable="d" 
+             MinHeight="600" MinWidth="1000"
+             Height="600" Width="1000" Title="ManiaPal Crash"
+             WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="#FF2D2D30" Style="{DynamicResource HedgeWindow}">
+    <Window.Resources>
+        <ResourceDictionary Source="Theme.xaml" />
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="Header" Content="ManiaPal has thrown an Exception!" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="62" Width="570" FontSize="36" Foreground="#0066CC"/>
+        <TextBox x:Name="TextBox_ExceptionInfo" Margin="10,77,10,70" Text="Exception Info goes here" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" />
+        <Grid Margin="10,0,10,10" VerticalAlignment="Bottom" Height="44">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Button_CopyLog" Grid.Column="0" Content="Copy Log to Clipboard" HorizontalAlignment="Stretch" Margin="10,0,10,0"  VerticalAlignment="Stretch" Click="Button_CopyLog_Click" />
+            <Button x:Name="Button_Ignore" Grid.Column="1" Content="Ignore and Close" HorizontalAlignment="Stretch" Margin="10,0,10,0"  VerticalAlignment="Stretch" Click="Button_Ignore_Click" />
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+﻿<Window x:Class="ManiaPal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManiaPal"
+        mc:Ignorable="d" Height="735" Width="605"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Title="Doki Doki Modification Club!" 
+        Loaded="UI_Window_Loaded" Closing="Window_Closing"
+        Style="{DynamicResource HedgeWindow}">
+    <Window.Resources>
+        <ResourceDictionary Source="Theme.xaml" />
+    </Window.Resources>
+    <Grid>
+        <Border VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="97" Width="578" BorderThickness="1" CornerRadius="8" BorderBrush="#FF3F3F46">
+            <Grid>
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Header="IO Type" VerticalAlignment="Top" HorizontalAlignment="Left" Height="97" Width="93" Margin="-1,-1,2,-1">
+                        <StackPanel>
+                            <RadioButton x:Name="UI_RadioButton_File" Content="File"  HorizontalAlignment="Stretch" Height="30" Margin="0,0,0,2" VerticalAlignment="Top" Checked="UI_IOType_File_Checked" IsChecked="True"/>
+                            <RadioButton x:Name="UI_RadioButton_Mem" Content="Memory" HorizontalAlignment="Stretch" Height="30" Margin="0,0,0,2" VerticalAlignment="Top" Checked="UI_IOType_Mem_Checked"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Palette Sets" VerticalAlignment="Top" HorizontalAlignment="Left" Height="97" Width="140" Margin="-1,-1,2,-1">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                                <Button Margin="2,2,0,0" Content="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click" Background="#007ACC" x:Name="UI_PaletteSet_Def"/>
+                                <Button Margin="2,2,0,0" Content="1" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                                <Button Margin="2,2,0,0" Content="2" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                                <Button Margin="2,2,0,0" Content="3" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Margin="2,2,0,0" Content="4" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                                <Button Margin="2,2,0,0" Content="5" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                                <Button Margin="2,2,0,0" Content="6" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                                <Button Margin="2,2,0,0" Content="7" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" Width="29" Click="UI_PaletteSet_Click"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="UI_FileOptions" Header="File Options" VerticalAlignment="Top" HorizontalAlignment="Left" Height="97" Width="120" Margin="-1,-1,2,-1">
+                        <StackPanel>
+                            <Button Margin="4,4,4,0" Content="Load File" VerticalAlignment="Top" Height="25" Click="UI_LoadFile_Click"/>
+                            <Button Margin="4,4,4,4" Content="Save File" VerticalAlignment="Top" Height="25" Click="UI_SaveFile_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="UI_MemOptions" Header="Memory Options" VerticalAlignment="Top" HorizontalAlignment="Left" Height="97" Width="120" Margin="-1,-1,2,-1" Visibility="Collapsed">
+                        <StackPanel>
+                            <Button Margin="4,4,4,8" Content="Read Palette" VerticalAlignment="Top" Height="25" Click="UI_UpdatePalette_Click"/>
+                            <CheckBox x:Name="UI_CheckBox_UpdateMem" Content="Auto Update" VerticalAlignment="Top" Height="25" Width="90"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="ManiaPal" VerticalAlignment="Top" HorizontalAlignment="Left" Height="97" Width="120" Margin="-1,-1,2,-1">
+                        <StackPanel>
+                            <Button Margin="4,4,4,0" Content="Options" VerticalAlignment="Top" Height="25" Click="UI_Options_Click"/>
+                            <Button Margin="4,4,4,4" Content="Import / Export" VerticalAlignment="Top" Height="25" Click="UI_IM_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <Grid Width="99" MouseLeftButtonDown="UI_SpriteView_MouseLeftButtonDown">
+                        <Label x:Name="UI_SpriteViewLabel" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock>
+                                Click here to
+                                <LineBreak/>
+                                load a sprite
+                            </TextBlock>
+                        </Label>
+                        <Image x:Name="UI_SpriteView" RenderOptions.BitmapScalingMode="NearestNeighbor" Margin="3" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <GroupBox Header="Palette" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,112,0,0" Height="581" Width="578">
+            <StackPanel x:Name="UI_Palettes">
+
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

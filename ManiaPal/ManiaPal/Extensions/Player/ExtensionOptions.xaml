@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ManiaPal.Extensions.Player.ExtensionOptions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ManiaPal.Extensions.Player"
+             mc:Ignorable="d" 
+             d:DesignHeight="169" d:DesignWidth="508">
+    <Grid>
+        <GroupBox Header="Super State Preview" Margin="10,10,0,0" Height="112" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136">
+            <Grid>
+                <StackPanel>
+                    <RadioButton Content="Inactive"           Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="0" IsChecked="True"/>
+                    <RadioButton Content="Activate"           Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="1"/>
+                    <RadioButton Content="Pulse (Sonic Only)" Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="2"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Super State Sets" Margin="151,10,0,0" Height="112" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111">
+            <Grid>
+                <StackPanel>
+                    <RadioButton Content="Normal"    Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="3" IsChecked="True"/>
+                    <RadioButton Content="HCZ Water" Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="4"/>
+                    <RadioButton Content="CPZ Water" Margin="0,0,0,2" Height="24" Checked="RadioButton_Checked" Tag="5"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

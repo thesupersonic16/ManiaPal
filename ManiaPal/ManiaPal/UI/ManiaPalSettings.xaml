@@ -1,0 +1,34 @@
+﻿<Window x:Class="ManiaPal.ManiaPalSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManiaPal"
+        mc:Ignorable="d"
+        Title="ManiaPal Settings" Height="484.666" Width="540" WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanMinimize" Style="{DynamicResource HedgeWindow}" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Resources>
+        <ResourceDictionary Source="Theme.xaml" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="36"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <GroupBox Header="ManiaPal Settings" HorizontalAlignment="Stretch" Height="165" Margin="5" VerticalAlignment="Top">
+                <Grid>
+                    <Button Content="About ManiaPal" HorizontalAlignment="Left" Height="23" Margin="385,97,0,0" VerticalAlignment="Top" Width="113" Click="UI_About_Click"/>
+                    <CheckBox Content="Show Active Colours (For SpriteView)" IsChecked="{Binding Config_ShowActiveColours}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Loaded File Settings" HorizontalAlignment="Stretch" Height="204" Margin="5" VerticalAlignment="Top">
+                <Grid x:Name="UI_Control" Background="#FF2D2D30" Margin="0,0,0,0" />
+            </GroupBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="-4" Grid.Row="1" Background="{StaticResource HMM.Window.DialogBottom}">
+            <Button Content="OK"     Margin="8,0,0,0" HorizontalAlignment="Left" Height="23" VerticalAlignment="Center" Width="65" Click="UI_OK_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
