@@ -4,7 +4,7 @@ A palette editor for [Sonic Mania](https://store.steampowered.com/app/584400/Son
 ## Credits
 - SuperSonic16 - Developing the Palette Editor
 - LJSTAR - Palette Memory Addresses
-- Modern - ManiaPal aion
+- Modern - ManiaPal Icon
 - Xeeynamo - Reverse-Engineering Animations
 - RubberduckyCooly - Beta Tester & Helped with adding UIBackground.bin and ChaosEmerald.bin support
 - TGE - Helped with working with indexed images correctly
